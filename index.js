@@ -2,6 +2,13 @@ const {
   AxelarAssetTransfer,
   Environment,
 } = require("@axelar-network/axelarjs-sdk");
+const { dependencies } = require("./package.json");
+
+console.log("Node version:", process.version);
+console.log(
+  "AxelarJS SDK version:",
+  dependencies["@axelar-network/axelarjs-sdk"]
+);
 
 const test = async () => {
   const from = process.env.srcChain || "avalanche";
@@ -21,8 +28,10 @@ const test = async () => {
   process.exit(0);
 };
 
+const timeout = process.env.timeout || 15000;
 setTimeout(() => {
-  console.log("Timeout 15s");
+  console.log("Timeout", timeout / 1000, "seconds");
   process.exit(0);
-}, 15000);
+}, timeout);
+
 test();
