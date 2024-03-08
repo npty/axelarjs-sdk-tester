@@ -1,0 +1,127 @@
+{
+  "baseFee": "22986631916599849",
+  "expressFee": "5237321571720000",
+  "sourceToken": {
+    "contract_address": "0x0000000000000000000000000000000000000000",
+    "symbol": "AVAX",
+    "name": "Avalanche",
+    "decimals": 18,
+    "token_price": {
+      "usd": 37.41
+    },
+    "gas_price": "0.000000029096230954",
+    "gas_price_gwei": "29.096230954",
+    "gas_price_in_units": {
+      "value": "29096230954",
+      "decimals": 18
+    }
+  },
+  "executeGasMultiplier": 1.16,
+  "destToken": {
+    "gas_price": "0.000000003",
+    "gas_price_gwei": "3",
+    "decimals": 18
+  },
+  "apiResponse": {
+    "method": "getFees",
+    "params": {
+      "method": "getFees",
+      "destinationChain": "binance",
+      "sourceChain": "avalanche",
+      "symbol": "axlUSDC",
+      "destinationContractAddress": "0xce16F69375520ab01377ce7B88f5BA8C48F8D666",
+      "sourceContractAddress": "0xce16F69375520ab01377ce7B88f5BA8C48F8D666",
+      "amountInUnits": "100"
+    },
+    "result": {
+      "base_fee": 0.02298663191659985,
+      "base_fee_usd": 0.8599299000000002,
+      "execute_gas_multiplier": 1.1550000000000002,
+      "source_base_fee": 0.02298663191659985,
+      "source_base_fee_string": "0.022986631916599849",
+      "source_base_fee_usd": 0.8599299000000002,
+      "destination_base_fee": 0.002370062839346251,
+      "destination_base_fee_string": "0.002370062839346251",
+      "destination_base_fee_usd": 0.8599299000000002,
+      "source_confirm_fee": 0.00814755412991179,
+      "destination_confirm_fee": 0.0008400628393462504,
+      "express_supported": true,
+      "express_fee": 0.00523732157172,
+      "express_fee_string": "0.005237321571720000",
+      "express_fee_usd": 0.19592819999804517,
+      "express_execute_gas_multiplier": 1.1550000000000002,
+      "source_express_fee": {
+        "relayer_fee": 0,
+        "relayer_fee_usd": 0,
+        "express_gas_overhead_fee": 0.00523732157172,
+        "express_gas_overhead_fee_usd": 0.19592819999804517,
+        "total": 0.00523732157172,
+        "total_usd": 0.19592819999804517
+      },
+      "destination_express_fee": {
+        "relayer_fee": 0,
+        "relayer_fee_usd": 0,
+        "express_gas_overhead_fee": 0.00054,
+        "express_gas_overhead_fee_usd": 0.1959282,
+        "total": 0.00054,
+        "total_usd": 0.1959282
+      },
+      "token": {
+        "symbol": "axlUSDC",
+        "decimals": 6,
+        "token_price": {
+          "usd": 1.002
+        }
+      },
+      "source_token": {
+        "contract_address": "0x0000000000000000000000000000000000000000",
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "decimals": 18,
+        "token_price": {
+          "usd": 37.41
+        },
+        "gas_price": "0.000000029096230954",
+        "gas_price_gwei": "29.096230954",
+        "gas_price_in_units": {
+          "value": "29096230954",
+          "decimals": 18
+        }
+      },
+      "destination_native_token": {
+        "contract_address": "0x0000000000000000000000000000000000000000",
+        "name": "BNB",
+        "symbol": "BNB",
+        "decimals": 18,
+        "token_price": {
+          "usd": 362.83
+        },
+        "gas_price": "0.000000003",
+        "gas_price_gwei": "3.0",
+        "gas_price_in_units": {
+          "value": "3000000000",
+          "decimals": 18
+        }
+      },
+      "axelar_token": {
+        "name": "Axelar",
+        "symbol": "AXL",
+        "decimals": 6,
+        "token_price": {
+          "usd": 1.27
+        }
+      },
+      "ethereum_token": {
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "decimals": 18,
+        "token_price": {
+          "usd": 2948.7
+        }
+      }
+    },
+    "time_spent": 19
+  },
+  "success": true,
+  "expressSupported": true
+}

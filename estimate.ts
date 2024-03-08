@@ -1,40 +1,20 @@
-import {
-  AxelarQueryAPI,
-  Environment,
-  GasToken,
-} from "@axelar-network/axelarjs-sdk";
+import { AxelarQueryAPI, Environment } from "@axelar-network/axelarjs-sdk";
 import { utils } from "ethers";
 
-const sdk = new AxelarQueryAPI({ environment: Environment.MAINNET });
+const sdk = new AxelarQueryAPI({ environment: Environment.TESTNET });
 
-const srcChain = "osmosis";
-const destChain = "arbitrum";
+const srcChain = "arbitrum-sepolia";
+const destChain = "optimism-sepolia";
 const srcDecimals = 6;
-const destDecimals = 18;
-const minGasPrice = undefined;
 const gasLimit = 1_000_000;
 
 (async () => {
-  const srcToDest = await sdk.estimateGasFee(
-    srcChain,
-    destChain,
-    "OSMO",
-    gasLimit,
-    1.2,
-    minGasPrice
-  );
-  const destToSrc = await sdk.estimateGasFee(
-    destChain,
-    srcChain,
-    "ETH",
-    gasLimit,
-    1.2,
-    minGasPrice
-  );
+  const srcToDest = await sdk.estimateGasFee(srcChain, destChain, gasLimit);
+  const destToSrc = await sdk.estimateGasFee(destChain, srcChain, gasLimit);
 
   console.log(
     `${srcChain} to ${destChain} fee:`,
-    utils.formatEther(srcToDest as string),
+    utils.formatUnits(srcToDest as string, srcDecimals),
     "ETH"
   );
   console.log(

@@ -5,6 +5,7 @@
     "squid": "ts-node squid.ts",
     "recover": "ts-node recover.ts",
     "estimate": "ts-node estimate.ts",
+    "nativeBaseFee": "ts-node nativeBaseFee.ts",
     "addgas": "ts-node addGas.ts"
   },
   "dependencies": {
